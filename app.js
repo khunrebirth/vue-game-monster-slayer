@@ -8,6 +8,7 @@ new Vue({
     },
     methods: {
         startGame() {
+            // Config
             this.gameIsRunning = true
             this.playerHealth = 100
             this.monsterHealth = 100
@@ -64,6 +65,7 @@ new Vue({
             return damage = Math.max(Math.floor(Math.random() * max) + 1, min)
         },
         checkWin() {
+
             if (this.monsterHealth <= 0) {
                 if (confirm('You won! New Game?'))
                     this.startGame()
